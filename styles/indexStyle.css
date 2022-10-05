@@ -1,0 +1,157 @@
+#container{
+    background-color: black;
+}
+#container>p:first-child{
+    color: white;
+}
+#container>header{
+    border: 1px solid black;
+    background-color:lightseagreen;
+    color: white;
+}
+#container>section{
+    border: 1px solid black;
+    background-color:red;
+    color: white;
+}
+#container>article{
+    border: 1px solid black;
+    background-color:green;
+    color: white;
+}
+#container>aside{
+    border: 1px solid black;
+    background-color:blueviolet;
+    color: white;
+}
+#container>footer{
+    border: 1px solid black;
+    background-color:grey;
+    color: white;
+}
+
+@media (max-width:480px){
+    #container{
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+    }
+    #container>p:first-child{
+        margin-left:2%;
+        margin-top: 4%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+    #container>header{
+        margin:0 2%;
+        padding:10px;
+    }
+    #container>section{
+        padding:10px;
+        margin:0 2%;
+    }
+    #container>article{
+        padding:10px;
+        margin:0 2%;
+    }
+    #container>aside{
+        padding:10px;
+        margin:0 2%;
+    }
+    #container>footer{
+        padding:10px;
+        margin:0 2%;
+        margin-bottom: 2%;
+    }
+}
+
+@media (min-width:481px) and (max-width:769px){
+    #container{
+        display: grid;
+        grid-template-areas: 
+        "main main"
+        "header header"
+        "hero hero"
+        "contenido aside"
+        "contenido aside"
+        "footer footer";
+    }
+    #container>p:first-child{
+        grid-area: main;
+        margin-left:2%;
+        margin-top: 4%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+    #container>header{
+        grid-area: header;
+        margin:0 2%;
+        padding:10px;
+    }
+    #container>section{
+        grid-area: hero;
+        margin:0 2%;
+        padding:10px;
+    }
+    #container>article{
+        grid-area: contenido;
+        margin-left:4%;
+        padding:10px;
+    }
+    #container>aside{
+        grid-area: aside;
+        margin-right:4%;
+        padding:10px;
+    }
+    #container>footer{
+        grid-area: footer;
+        margin:0 2%;
+        margin-bottom:2%;
+        padding:10px;
+    }
+}
+
+@media (min-width:770px){
+    #container{
+        display: grid;
+        grid-template-areas: 
+        "main main"
+        "header header"
+        "hero hero"
+        "contenido aside"
+        "contenido aside"
+        "footer footer";
+    }
+    #container>p:first-child{
+        grid-area: main;
+        margin-left:2%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+    #container>header{
+        grid-area: header;
+        margin:0 2%;
+        padding-left:1%;
+    }
+    #container>section{
+        grid-area: hero;
+        margin:0 2%;
+        padding-left:1%;
+    }
+    #container>article{
+        grid-area: contenido;
+        margin-left:15%;
+        padding-left:2%;
+    }
+    #container>aside{
+        grid-area: aside;
+        margin-right:15%;
+        padding-left:2%;
+    }
+    #container>footer{
+        grid-area: footer;
+        margin:0 2%;
+        margin-bottom:2%;
+        padding-left:1%;
+    }
+}
